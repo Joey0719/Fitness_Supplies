@@ -3,8 +3,7 @@ class FitnessSupplies::CLI
   def call
     welcome
     show_list
-    get_user_data 
-    goodbye
+    get_user_data
   end
 
   def welcome 
@@ -14,7 +13,7 @@ class FitnessSupplies::CLI
   def show_list 
     puts "\nHere's a list of Fitness Equipment categories."
 
-    catg = ['Cardio', 'Strength', 'Group Training', 'Vibration Training', 'Flooring', 'Accessories']
+    catg = ['Cardio','Vibration Training', 'Strength', 'Group Training', 'Flooring', 'Accessories']
 
     catg.each.with_index(1) do |cg, index|
       puts "\n#{index}. #{cg}"
@@ -79,11 +78,13 @@ class FitnessSupplies::CLI
     user_choice = gets.chomp.to_s.downcase
     if user_choice == 'y'
       get_user_data
+    else
+      goodbye
     end
   end
   
   def goodbye
-    puts "Ok, come back again soon. Remember, your health is your wealth"
+    puts "\nOk, come back again soon. Remember, your health is your wealth"
     exit!
   end
 
