@@ -2,7 +2,7 @@
 
 require "nokogiri"
 require "open-uri"
-require "pry"
+
 
 # MAIN ENVIRONMENT FILES
 
